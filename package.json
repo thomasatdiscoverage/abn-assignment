@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "start": "npx http-server src",
+    "start": "npx http-server src --port 8080",
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui"
   },

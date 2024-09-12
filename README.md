@@ -16,9 +16,11 @@ Please follow the instructions below to setup the project and run the automated 
 
 # Instructions
 
+
 - Open a terminal on the root of this project
 - Run `npm i` to install the project dependencies.
 - Run `npm start` to start the http-server to serve the given single-page application, found in the `./src` directory.
+   - The server is run on port 8080. If this port is not available run `npx http-server src --port [port_number]` to run the server on a different port. Note that in that case, also change the baseUrl to the correct port, found in `./playwright.config.ts` 
 - Run `npm test` to run all Playwright tests in headless mode or run `npm test:ui` to open the Playwright test runner to
   run Playwright tests via the UI. After execution, you should that 39 tests have passed.
 
