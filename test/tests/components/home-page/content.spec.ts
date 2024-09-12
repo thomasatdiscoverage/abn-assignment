@@ -16,15 +16,19 @@ test.describe('home-page -> content ', () => {
     await page.reload();
   });
 
-  test('content should have the correct background color', async ({ page }) => {
+  test('content should have the correct background color', async ({  }) => {
     await homePage.main.shouldHaveBackgroundColor(62, 63, 65);
   });
 
-  test('content container should have the correct background color', async ({ page }) => {
+  test('content should have the correct background image', async ({ baseURL }) => {
+    await homePage.main.shouldHaveBackgroundImage(`${baseURL}img/bg2.jpg`);
+  });
+
+  test('content container should have the correct background color', async ({  }) => {
     await homePage.content.main.shouldHaveBackgroundColor(255, 255, 255, 0.9);
   });
 
-  test('first content paragraph should contain correct text ', async ({ page }) => {
+  test('first content paragraph should contain correct text ', async ({  }) => {
     await homePage.content.firstParagraph.shouldHaveText(
       `Lorem ipsum egestas posuere vivamus neque facilisis augue 
       cursus litora rhoncus aenean aptent eu quis, odio scelerisque curabitur 
@@ -38,7 +42,7 @@ test.describe('home-page -> content ', () => {
     );
   });
 
-  test('second content paragraph should contain correct text ', async ({ page }) => {
+  test('second content paragraph should contain correct text ', async ({  }) => {
     await homePage.content.secondParagraph.shouldHaveText(
       `Tempus ultrices euismod eros libero posuere aliquam dui dictum hac integer, 
       orci pretium aptent pellentesque aenean conubia vulputate orci rutrum neque phasellus, 
@@ -53,7 +57,7 @@ test.describe('home-page -> content ', () => {
     );
   });
 
-  test('third content paragraph should contain correct text ', async ({ page }) => {
+  test('third content paragraph should contain correct text ', async ({  }) => {
     await homePage.content.thirdParagraph.shouldHaveText(
       `Mauris aptent nunc per sociosqu placerat nisi sociosqu accumsan fermentum,
        habitant lacus massa metus cras malesuada rhoncus ut, imperdiet et taciti malesuada 
